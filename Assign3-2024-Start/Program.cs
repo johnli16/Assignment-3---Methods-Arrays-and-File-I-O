@@ -276,3 +276,52 @@ void GraphValuesInMemory(string[] dates, double[] values, int logicalSize)
 	Console.WriteLine($"{dates[i]}: {bar}");
 	//TODO: Replace this code with yours to implement this function.
 }
+
+void DisplaySalesChart(double[] sales, string[] dates, int countOfEntries)
+{
+    double maxSale = sales.Max();
+    int chartHeight = 20; 
+    double interval = maxSale / chartHeight;
+    int labelWidth = maxSale.ToString().Length;
+
+    
+    Console.WriteLine("=== Sales for the month of February ===\n");
+    Console.WriteLine("Dollars");
+
+    
+    for (double level = maxSale; level >= 0; level -= interval)
+    {
+        
+        Console.Write(level.ToString("0").PadLeft(labelWidth) + " |");
+
+        
+        for (int day = 0; day < countOfEntries; day++)
+        {
+            if (sales[day] >= level)
+            {
+                Console.Write(" █");
+            }
+            else
+            {
+                Console.Write("  ");
+            }
+        }
+        Console.WriteLine(); 
+    }
+
+    
+    Console.Write(new string(' ', labelWidth) + " +");
+    foreach (string date in dates)
+    {
+        Console.Write("--"); 
+    }
+    Console.WriteLine();
+
+    
+    Console.Write(new string(' ', labelWidth) + "  "); 
+    foreach (string date in dates)
+    {
+        Console.Write(date.PadLeft(2, '0') + " "); 
+    }
+    Console.WriteLine(); 
+}

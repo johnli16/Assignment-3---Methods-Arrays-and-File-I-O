@@ -1,0 +1,5 @@
+C:\Github\cpsc1012\Assignment-3---Methods-Arrays-and-File-I-O\Assignment-3---Methods-Arrays-and-File-I-O\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.GeneratedMSBuildEditorConfig.editorconfig
+C:\Github\cpsc1012\Assignment-3---Methods-Arrays-and-File-I-O\Assignment-3---Methods-Arrays-and-File-I-O\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.AssemblyInfoInputs.cache
+C:\Github\cpsc1012\Assignment-3---Methods-Arrays-and-File-I-O\Assignment-3---Methods-Arrays-and-File-I-O\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.AssemblyInfo.cs
+C:\Github\cpsc1012\Assignment-3---Methods-Arrays-and-File-I-O\Assignment-3---Methods-Arrays-and-File-I-O\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.csproj.CoreCompileInputs.cache
+C:\Github\cpsc1012\Assignment-3---Methods-Arrays-and-File-I-O\Assignment-3---Methods-Arrays-and-File-I-O\Assign3-2024-Start\obj\Debug\net8.0\Assign3-2024-RLaw.sourcelink.json
