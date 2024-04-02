@@ -206,14 +206,14 @@ void SaveMemoryValuesToFile(string[] dates, double[] values, int logicalSize)
 	if (logicalSize == 0)
 		throw new Exception("No entries  loaded. Please load a file into memory");
 	if (logicalSize > 1)
-		Array.Sort(dates, values, 0, logicalSize);
+		Array.Sort(dates, values);
 	string[] csvLines = new string[logicalSize + 1];
 	csvLines[0] = "dates,values";
-	for (int i = 1; i <= logicalSize, i++)
+	for (int i = 1; i <= logicalSize; i++)
 	{
 		csvLines[i] = $"{dates[i - 1]},{values[i - 1].ToString()}";
 	}
-	fileName.WriteAllLines(filePath, csvLines);
+	File.WriteAllLines(filePath, csvLines);
 	Console.WriteLine($"Save complete. {fileName} has {logicalSize} entries.");
 	//TODO: Replace this code with yours to implement this function.
 }
@@ -223,7 +223,7 @@ int AddMemoryValues(string[] dates, double[] values, int logicalSize)
 	double value = 0.0;
 	string dateString = "";
 
-	dateString = PromptDate("Enter date format mm-dd-yyyy: ");
+	dateString = Prompt("Enter date format mm-dd-yyyy: ");
 	bool found = false;
 	for (int i = 0; i < logicalSize; i++)
 		if (dates[i].Equals(dateString))
@@ -231,8 +231,8 @@ int AddMemoryValues(string[] dates, double[] values, int logicalSize)
 	if (found == true)
 		throw new Exception($"{dateString} is already in memory. Edit entry instead.");
 	value = PromptDoubleBetweenMinMax($"Enter a double value", minValue, maxValue);
-	dates{ logicalSize} = dateString;
-	values{ logicalSize} = value;
+	dates[logicalSize] = dateString;
+	values[logicalSize] = value;
 	logicalSize++;
 	return logicalSize;
 	//TODO: Replace this code with yours to implement this function.
